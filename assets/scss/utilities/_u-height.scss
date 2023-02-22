@@ -1,0 +1,13 @@
+$utility-name: 'u-h';
+
+.px\: {
+    &#{$utility-name} {
+        &-25 {
+            height: 25px;
+        }
+
+        &-40 {
+            height: 40px;
+        }
+    }
+}

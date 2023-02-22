@@ -1,0 +1,7 @@
+$layout-name: 'l-news';
+
+.#{$layout-name} {
+    &__card-img {
+        height: 290px;
+    }
+}

@@ -1,0 +1,15 @@
+$utility-name: 'u-font-family';
+
+.#{$utility-name} {
+    &-lato {
+        font-family: 'Lato', sans-serif !important;
+    }
+
+    &-myriad-pro {
+        font-family: 'Myriad Pro', sans-serif;
+    }
+
+    &-nunito {
+        font-family: 'Nunito', sans-serif;
+    }
+}

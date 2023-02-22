@@ -1,0 +1,63 @@
+.l-team {
+    &:hover {
+        .swiper-button-prev-team {
+            left: -5rem;
+            
+            @media screen and (min-width: 1600px) {
+                left: -15rem;
+            }
+        }
+
+        .swiper-button-next-team {
+            right: -5rem;
+
+            @media screen and (min-width: 1600px) {
+                right: -15rem;
+            }
+        }
+    }
+}
+
+.swiper-button-prev-team,
+.swiper-button-next-team {
+    width: 64px;
+    height: 64px;
+    transition: all .6s;
+    border: 2px solid $color-folk-aluminium;
+    border-radius: 50%;
+
+    &::before {
+        font-size: 1.375rem;
+        font-weight: 600;
+        font-family: 'Font Awesome 5 Free';
+        color: $color-folk-aluminium;
+    }
+
+    &::after {
+        display: none;
+    }
+
+    &:hover {
+        background-color: $color-folk-aluminium;
+
+        &::before {
+            color: $color-folk-white;
+        }
+    }
+}
+
+.swiper-button-prev-team {
+    left: -100rem;
+
+    &::before {
+        content: '\f30a';
+    }
+}
+
+.swiper-button-next-team {
+    right: -100rem;
+
+    &::before {
+        content: '\f30b';
+    }
+}

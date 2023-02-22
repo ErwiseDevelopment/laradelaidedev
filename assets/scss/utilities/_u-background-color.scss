@@ -1,0 +1,249 @@
+$utility-name: 'u-bg-folk';
+
+.#{$utility-name} {
+    &-black {
+        background-color: $color-folk-black !important;
+    }
+
+    &-cyan-blue {
+        background-color: $color-folk-cyan-blue !important;
+    }
+
+    &-dark-grayish-navy {
+        background-color: $color-folk-dark-grayish-navy !important;
+    }
+
+    &-dark-blue {
+        background-color: $color-folk-dark-blue !important;
+    }
+
+    &-extrabold-electric-blue {
+        background-color: $color-folk-extrabold-electric-blue !important;
+    }
+
+    &-extra-light-gray {
+        background-color: $color-folk-extra-light-gray !important;
+    }
+
+    &-facebook {
+        background-color: $color-folk-facebook !important;
+    }
+
+    &-instagram {
+        background-color: $color-folk-instagram !important;
+    }
+
+    &-golden {
+        background-color: $color-folk-golden !important;
+    }
+
+    &-medium-electric-blue {
+        background-color: $color-folk-medium-electric-blue !important;
+    }
+
+    &-very-dark-blue {
+        background-color: $color-folk-very-dark-blue !important;
+    }
+
+    &-none {
+        background: none !important;
+    }
+
+    &-youtube {
+        background-color: $color-folk-youtube !important;
+    }
+
+    &-white {
+        background-color: $color-folk-white !important;
+    }
+}
+
+//before
+.before\:\: {
+    &#{$utility-name} {
+        &-black {
+            &::before {
+                background-color: $color-folk-black !important;
+            }
+        }
+
+        &-none {
+            &::before {
+                background: none !important;
+            }
+        }
+
+        &-white {
+            &::before {
+                background-color: $color-folk-white !important;
+            }
+        }
+    }
+}
+
+//after
+.after\:\: {
+    &#{$utility-name} {
+        &-black {
+            &::after {
+                background-color: $color-folk-black !important;
+            }
+        }
+
+        &-none {
+            &::after {
+                background: none !important;
+            }
+        }
+
+        &-white {
+            &::after {
+                background-color: $color-folk-white !important;
+            }
+        }
+    }
+}
+
+//hover
+.hover\: {
+    &#{$utility-name} {
+        &-black {
+            &:hover {
+                background-color: $color-folk-black !important;
+            }
+        }
+
+        &-golden {
+            &:hover {
+                background-color: $color-folk-golden !important;
+            }
+        }
+
+        &-none {
+            &:hover {
+                background: none !important;
+            }
+        }
+
+        &-white {
+            &:hover {
+                background-color: $color-folk-white !important;
+            }
+        }
+    }
+}
+
+//query sm
+.sm\: {
+    &#{$utility-name} {
+        &-black {
+            @media screen and (min-width: 576px) {
+                background-color: $color-folk-black !important;
+            }
+        }
+
+        &-none {
+            @media screen and (min-width: 576px) {
+                background: none !important;
+            }
+        }
+
+        &-white{
+            @media screen and (min-width: 576px) {
+                background-color: $color-folk-white!important;
+            }
+        }
+    }
+}
+
+//query md
+.md\: {
+    &#{$utility-name} {
+        &-black {
+            @media screen and (min-width: 768px) {
+                background-color: $color-folk-black !important;
+            }
+        }
+
+        &-none {
+            @media screen and (min-width: 768px) {
+                background: none !important;
+            }
+        }
+
+        &-white{
+            @media screen and (min-width: 768px) {
+                background-color: $color-folk-white!important;
+            }
+        }
+    }
+}
+
+//query lg
+.lg\: {
+    &#{$utility-name} {
+        &-black {
+            @media screen and (min-width: 992px) {
+                background-color: $color-folk-black !important;
+            }
+        }
+
+        &-none {
+            @media screen and (min-width: 992px) {
+                background: none !important;
+            }
+        }
+
+        &-white{
+            @media screen and (min-width: 992px) {
+                background-color: $color-folk-white!important;
+            }
+        }
+    }
+}
+
+//query xl
+.xl\: {
+    &#{$utility-name} {
+        &-black {
+            @media screen and (min-width: 1200px) {
+                background-color: $color-folk-black !important;
+            }
+        }
+
+        &-none {
+            @media screen and (min-width: 1200px) {
+                background: none !important;
+            }
+        }
+
+        &-white{
+            @media screen and (min-width: 1200px) {
+                background-color: $color-folk-white!important;
+            }
+        }
+    }
+}
+
+//query xxl
+.xxl\: {
+    &#{$utility-name} {
+        &-black {
+            @media screen and (min-width: 1600px) {
+                background-color: $color-folk-black !important;
+            }
+        }
+
+        &-none {
+            @media screen and (min-width: 1600px) {
+                background: none !important;
+            }
+        }
+
+        &-white{
+            @media screen and (min-width: 1600px) {
+                background-color: $color-folk-white!important;
+            }
+        }
+    }
+}
