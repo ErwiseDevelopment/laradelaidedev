@@ -14,7 +14,7 @@ get_header(); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-<!-- banner -->a
+<!-- banner -->
 <?php
     //pega o id da pagina/post
  if( isset($_GET['id']))
@@ -47,9 +47,7 @@ get_header(); ?>
             <div class="col-12 my-5">
 
                 <h1 class="l-banner-full__title u-font-weight-bold text-center u-color-folk-white mb-4">
-					<?php 
-						echo $categories_post[0] ? $categories_post[0] : 'Últimas Notícias';
-					?>
+					Últimas Noticias
                 </h1>
 
                 <div class="rounded u-bg-folk-golden mx-auto" style="width:320px;height:9px"></div>
