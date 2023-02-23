@@ -21,7 +21,7 @@ get_header(); ?>
  $id_url = $_GET['id'];
 
  if(empty($_GET['id'])) {
-    header('Location: page-blogs.php');
+    header("Location: echo get_home_url( null, 'blogs')");
     exit();
 }
 
