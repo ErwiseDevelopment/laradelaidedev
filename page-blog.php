@@ -21,7 +21,7 @@ get_header(); ?>
  $id_url = $_GET['id'];
 
  if(empty($_GET['id'])) {
-    header('Location: https://lar.erwisedev-hml.com.br/blogs');
+    echo "<script>window.location.href='https://lar.erwisedev-hml.com.br/blogs';</script>";
     exit();
 }
 
