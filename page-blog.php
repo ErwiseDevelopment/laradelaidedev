@@ -51,8 +51,12 @@ $data = json_decode( $body );
 	 if(!is_wp_error( $request_posts )) {
         $response_code = wp_remote_retrieve_response_code($request_posts);
 
-		if ($response_code === 404) {
-			echo "<h2 class='l-single-post__title u-font-weight-bold u-color-folk-bold-electric-blue mb-4'>Post nao encontrado </h2>";
+		if (!is_wp_error($request_posts)) {
+			$response_code = wp_remote_retrieve_response_code($request_posts);
+			if ($response_code === 404) {
+				include '404.php'; // aqui você pode inserir o caminho do arquivo que deseja incluir
+				exit();
+			}
 		}
 	}
      if(!is_wp_error( $request_posts )) :
@@ -63,6 +67,7 @@ $data = json_decode( $body );
 // 	echo "</pre>";
    if(!is_wp_error( $data )) :
     //    foreach( $data as $rest_post ) :
+	
 ?>
 
 <section class="u-bg-folk-extrabold-electric-blue py-5">
