@@ -18,7 +18,7 @@ get_header(); ?>
 <?php
 
 if(empty($_GET['id'])) {
-    wp_redirect(get_home_url(null, 'blogs'));
+    echo "<script>window.location.href='" . get_home_url(null, 'blogs') . "';</script>";
     exit();
 }
     //pega o id da pagina/post
