@@ -23,7 +23,7 @@ if(empty($_GET['id'])) {
 }
 
 $request_posts = wp_remote_get( $post_link );
-if(is_wp_error($request_posts) || wp_remote_retrieve_response_code($request_posts) === 404) {
+if( wp_remote_retrieve_response_code($request_posts) === 404) {
     echo "Post não encontrado";
     exit();
 }
