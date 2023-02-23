@@ -21,6 +21,17 @@ if(empty($_GET['id'])) {
     echo "<script>window.location.href='" . get_home_url(null, 'blogs') . "';</script>";
     exit();
 }
+
+$request_posts = wp_remote_get( $post_link );
+if(is_wp_error($request_posts) || wp_remote_retrieve_response_code($request_posts) === 404) {
+    echo "Post não encontrado";
+    exit();
+}
+
+$body = wp_remote_retrieve_body( $request_posts );
+$data = json_decode( $body );
+
+
     //pega o id da pagina/post
  if( isset($_GET['id']))
  $id_url = $_GET['id'];
