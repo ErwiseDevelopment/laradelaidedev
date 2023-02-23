@@ -51,10 +51,10 @@ $data = json_decode( $body );
 	 if(!is_wp_error( $request_posts )) {
         $response_code = wp_remote_retrieve_response_code($request_posts);
 
-        if ($response_code === 404) {
-            wp_die('Post não encontrado');
-        }
-	 }
+		if ($response_code === 404) {
+			echo "<h2 class='l-single-post__title u-font-weight-bold u-color-folk-bold-electric-blue mb-4'>Post nao encontrado </h2>";
+		}
+	}
      if(!is_wp_error( $request_posts )) :
    $body = wp_remote_retrieve_body( $request_posts );
    $data = json_decode( $body );
