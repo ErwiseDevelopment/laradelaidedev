@@ -20,6 +20,11 @@ get_header(); ?>
  if( isset($_GET['id']))
  $id_url = $_GET['id'];
 
+ if(empty($_GET['id'])) {
+    header('Location: page-blogs.php');
+    exit();
+}
+
     //url principal do site
      $link_pattern = get_field( 'link_padrao_portal', 'option' );
     // echo $link_pattern;
@@ -189,13 +194,6 @@ get_header(); ?>
 	</div>
 </section>
 <?php endwhile; ?>
-<script>
-if (window.location.pathname === '/blog') {
-  window.location.href = '<?php echo get_home_url( null, 'blogs')?>';
-}
-
-</script>
-
 </div><!-- #main -->
 </section><!-- #primary -->
 
