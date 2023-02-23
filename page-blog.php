@@ -21,10 +21,9 @@ get_header(); ?>
  $id_url = $_GET['id'];
 
  if(empty($_GET['id'])) {
-    echo "<script>window.location.href='https://lar.erwisedev-hml.com.br/blogs';</script>";
+    wp_redirect(get_home_url(null, 'blogs'));
     exit();
 }
-
     //url principal do site
      $link_pattern = get_field( 'link_padrao_portal', 'option' );
     // echo $link_pattern;
