@@ -48,6 +48,13 @@ $data = json_decode( $body );
 //	echo $post_link;
      //faz a requisição com o site no caminho digitado acima
      $request_posts = wp_remote_get( $post_link );
+	 if(!is_wp_error( $request_posts )) {
+        $response_code = wp_remote_retrieve_response_code($request_posts);
+
+        if ($response_code === 404) {
+            wp_die('Post não encontrado');
+        }
+	 }
      if(!is_wp_error( $request_posts )) :
    $body = wp_remote_retrieve_body( $request_posts );
    $data = json_decode( $body );
