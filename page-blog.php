@@ -17,13 +17,8 @@ get_header(); ?>
 <!-- banner -->
 <?php
     //pega o id da pagina/post
-//  if( isset($_GET['id']))
-//  $id_url = $_GET['id'];
-if (isset($_GET['id'])) {
-    $new_url = str_replace('?id=' . $_GET['id'], '', $_SERVER['REQUEST_URI']);
-    header('Location: ' . $new_url);
-    exit;
-}
+ if( isset($_GET['id']))
+ $id_url = $_GET['id'];
 
     //url principal do site
      $link_pattern = get_field( 'link_padrao_portal', 'option' );
@@ -194,6 +189,12 @@ if (isset($_GET['id'])) {
 	</div>
 </section>
 <?php endwhile; ?>
+<script>
+if (window.location.pathname === '/') {
+  window.location.href = '<?php echo get_home_url( null, 'blogs')?>';
+}
+
+</script>
 
 </div><!-- #main -->
 </section><!-- #primary -->
