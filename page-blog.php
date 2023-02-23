@@ -190,7 +190,7 @@ get_header(); ?>
 </section>
 <?php endwhile; ?>
 <script>
-if (window.location.pathname === '/') {
+if (window.location.pathname === '/blog') {
   window.location.href = '<?php echo get_home_url( null, 'blogs')?>';
 }
 
