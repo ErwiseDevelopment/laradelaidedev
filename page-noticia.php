@@ -133,8 +133,9 @@ get_header(); ?>
 
                                                 if(!is_wp_error( $data )) :
                                                     foreach( $data as $rest_post ) :
-                                                        $count++;
+                                                        
                                                         if($id_url <> $rest_post->id) :
+															$count++;
 										?>
 													<a 
 													class="col-12 u-border-b-1 last-child:u-border-b-1 border-light d-block text-decoration-none my-3 pb-3"

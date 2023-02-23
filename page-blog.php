@@ -17,8 +17,13 @@ get_header(); ?>
 <!-- banner -->
 <?php
     //pega o id da pagina/post
- if( isset($_GET['id']))
- $id_url = $_GET['id'];
+//  if( isset($_GET['id']))
+//  $id_url = $_GET['id'];
+if (isset($_GET['id'])) {
+    $new_url = str_replace('?id=' . $_GET['id'], '', $_SERVER['REQUEST_URI']);
+    header('Location: ' . $new_url);
+    exit;
+}
 
     //url principal do site
      $link_pattern = get_field( 'link_padrao_portal', 'option' );
@@ -46,7 +51,7 @@ get_header(); ?>
 
             <div class="col-12 my-5">
 			<h1 class="l-banner-full__title u-font-weight-bold text-center u-color-folk-white mb-4">
-                        Blogs
+                        Blog
                 </h1>
 
 
