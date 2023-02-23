@@ -16,14 +16,16 @@ get_header(); ?>
 
 <!-- banner -->
 <?php
+
+if(empty($_GET['id'])) {
+    wp_redirect(get_home_url(null, 'blogs'));
+    exit();
+}
     //pega o id da pagina/post
  if( isset($_GET['id']))
  $id_url = $_GET['id'];
 
- if(empty($_GET['id'])) {
-    wp_redirect(get_home_url(null, 'blogs'));
-    exit();
-}
+
     //url principal do site
      $link_pattern = get_field( 'link_padrao_portal', 'option' );
     // echo $link_pattern;
