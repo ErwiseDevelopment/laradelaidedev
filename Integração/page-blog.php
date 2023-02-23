@@ -154,7 +154,7 @@ $data = json_decode( $body );
 										<!-- loop -->
 										<?php
                                             $link_pattern = get_field( 'link_padrao_portal', 'option' );
-                                            $post_link = $link_pattern . get_field( 'link_caminho', 'option' ) . get_field( 'link_noticia', 'option' );
+                                            $post_link = $link_pattern . get_field( 'link_caminho', 'option' ) . get_field( 'link_conteudos_especiais', 'option' );
                                             $request_posts = wp_remote_get( $post_link );
                                             $count = 0;
 
